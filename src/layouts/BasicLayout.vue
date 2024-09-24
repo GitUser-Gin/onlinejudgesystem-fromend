@@ -24,7 +24,7 @@
 }
 
 #userLayout .content {
-  background: linear-gradient(to right, #d6d6d6, #fff);
+  background: linear-gradient(to right, #fefefe, #fff);
   margin-bottom: 16px;
   padding: 20px;
 }
