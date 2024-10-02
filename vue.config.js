@@ -5,5 +5,5 @@ module.exports = defineConfig({
   transpileDependencies: true,
   chainWebpack(config) {
     config.plugin("monaco").use(new MonacoWebpackPlugin());
-  },
+  }
 });
