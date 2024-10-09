@@ -74,9 +74,11 @@ const searchParams = ref<QuestionQueryRequest>({
 });
 
 const loadData = async () => {
-  const res = await QuestionControllerService.listQuestionVoByPageUsingPost(
-    searchParams.value
-  );
+  const res = await QuestionControllerService.listQuestionVoByPageUsingPost({
+    ...searchParams.value,
+    sortField: "createdTime",
+    sortOrder: "descend",
+  });
   if (res.code === 0) {
     dataList.value = res.data.records;
     total.value = res.data.total;
